@@ -44,4 +44,22 @@ class BookController extends Controller
 
         return redirect("/book");
     }
+
+    public function create()
+    {
+        // 空の$bookを渡す
+        $book = new Book();
+        return view('book/create', compact('book'));
+    }
+
+    public function store(Request $request)
+    {
+        $book = new Book();
+        $book->name = $request->name;
+        $book->price = $request->price;
+        $book->author = $request->author;
+        $book->save();
+
+        return redirect("/book");
+    }
 }
