@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 Route::resource('book', 'BookController');
 Route::get('/', function () {
     return view('welcome');
