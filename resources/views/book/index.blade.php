@@ -7,25 +7,25 @@
 @extends('book/layout')
 @section('content')
 <div class="container ops-main">
-<div class="row">
-  <div class="col-md-12">
-    @if (Route::has('login'))
-      <div class="top-right links">
-          @auth
-          <a class="btn btn-primary" href="{{ url('/home') }}" role="button">Home</a>
-          <a class="btn btn-primary" href="{{ url('/book') }}" role="button">Book</a>
-          <a href="/book/create" class="btn btn-default"><button type="button" class="btn btn-info">新規作成</button></a>
-          @else
-          <a class="btn btn-primary" href="{{ route('login') }}" role="button">Book</a>
-              @if (Route::has('register'))
-              <a class="btn btn-primary" href="{{ route('register') }}" role="button">Book</a>
-              @endif
-          @endauth
-      </div>
-    @endif
-    <h3 class="ops-title">書籍一覧</h3>
+  <div class="row">
+    <div class="col-md-12">
+      @if (Route::has('login'))
+        <div class="top-right links">
+            @auth
+            <a class="btn btn-primary" href="{{ url('/home') }}" role="button">Home</a>
+            <a class="btn btn-primary" href="{{ url('/book') }}" role="button">Book</a>
+            <a href="/book/create" class="btn btn-default"><button type="button" class="btn btn-info">新規作成</button></a>
+            @else
+            <a class="btn btn-primary" href="{{ route('login') }}" role="button">Book</a>
+                @if (Route::has('register'))
+                <a class="btn btn-primary" href="{{ route('register') }}" role="button">Book</a>
+                @endif
+            @endauth
+        </div>
+      @endif
+      <h3 class="ops-title">書籍一覧</h3>
+    </div>
   </div>
-</div>
 <div class="row">
   <div class="contents col-md-11 col-md-offset-1">
       @foreach($books as $book)
