@@ -32,11 +32,11 @@
 
       <div class="card text-center">
         <div class="card-header">
-          {{ $book->name }}
+          {{ $book->title }}
         </div>
         <div class="card-body">
-          <h5 class="card-title">{{ $book->price }}</h5>
-          <p class="card-text">{{ $book->author }}</p>
+          <h5 class="card-title">{{ $book->title }}</h5>
+          <p class="card-text">{{ $book->impressions }}</p>
           <a class="btn btn-primary" href="/book/{{ $book->id }}/edit">{{ $book->id }}</a>
         </div>
         <div class="card-footer text-muted">
