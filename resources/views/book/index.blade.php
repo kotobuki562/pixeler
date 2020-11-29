@@ -35,7 +35,7 @@
           {{ $book->title }}
         </div>
         <div class="card-body">
-          <h5 class="card-title">{{ $book->title }}</h5>
+          <h5 class="card-title">{{ $book->genre }}</h5>
           <p class="card-text">{{ $book->impressions }}</p>
           <a class="btn btn-primary" href="/book/{{ $book->id }}/edit">{{ $book->id }}</a>
         </div>

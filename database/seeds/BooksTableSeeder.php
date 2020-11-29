@@ -16,15 +16,15 @@ class BooksTableSeeder extends Seeder
 
     // 初期データ用意（列名をキーとする連想配列）
         $books = [
-                ['name' => 'PHP Book',
-                'price' => 2000,
-                'author' => 'PHPER'],
-                ['name' => 'Laravel Book',
-                'price' => 3000,
-                'author' => null],
-                ['name' => 'Ruby Book',
-                'price' => 2500,
-                'author' => 'Rubyist']
+                ['title' => 'PHP Book',
+                'genre' => 'ビジネス',
+                'impressions' => 'PHPER'],
+                ['title' => 'Laravel Book',
+                'genre' => '資格',
+                'impressions' => null],
+                ['title' => 'Ruby Book',
+                'genre' => 'マーケティング',
+                'impressions' => 'Rubyist']
                 ];
 
         // 登録
