@@ -15,16 +15,16 @@
             @endif
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group">
-                    <label for="name">書籍名</label>
-                    <input type="text" class="form-control" name="name" value="{{ $book->name }}">
+                    <label for="title">タイトル</label>
+                    <input type="text" class="form-control" name="title" value="{{ $book->title }}">
                 </div>
                 <div class="form-group">
-                    <label for="price">価格</label>
-                    <input type="text" class="form-control" name="price" value="{{ $book->price }}">
+                    <label for="genre">ジャンル</label>
+                    <input type="text" class="form-control" name="genre" value="{{ $book->genre }}">
                 </div>
                 <div class="form-group">
-                    <label for="author">著者</label>
-                    <input type="text" class="form-control" name="author" value="{{ $book->author }}">
+                    <label for="impressions">感想文</label>
+                    <input type="text" class="form-control" name="impressions" value="{{ $book->impressions }}">
                 </div>
                 <button type="submit" class="btn btn-default">登録</button>
                 <a href="/book">戻る</a>

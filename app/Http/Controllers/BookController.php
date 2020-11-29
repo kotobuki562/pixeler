@@ -31,9 +31,9 @@ class BookController extends Controller
     {
         $book = Book::findOrFail($id);
         $book->user_id = $request->user()->id;
-        $book->name = $request->name;
-        $book->price = $request->price;
-        $book->author = $request->author;
+        $book->title = $request->title;
+        $book->genre = $request->genre;
+        $book->impressions = $request->impressions;
         $book->save();
 
         return redirect("/book");
@@ -58,9 +58,9 @@ class BookController extends Controller
     {
         $book = new Book();
         $book->user_id = $request->user()->id;
-        $book->name = $request->name;
-        $book->price = $request->price;
-        $book->author = $request->author;
+        $book->title = $request->title;
+        $book->genre = $request->genre;
+        $book->impressions = $request->impressions;
         $book->save();
 
         return redirect("/book");
