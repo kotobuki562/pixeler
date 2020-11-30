@@ -37,6 +37,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ $book->genre }}</h5>
           <p class="card-text">{{ $book->impressions }}</p>
+          <p class="card-text">{{ Auth::user()->name }}さんの投稿</p>
           <a class="btn btn-primary" href="/book/{{ $book->id }}/edit">{{ $book->id }}</a>
         </div>
         <div class="card-footer text-muted">
